@@ -11,6 +11,12 @@ patterns:
   patterns:
   - include: source.yaml
 
+- name: markup.raw.toml.front-matter
+  begin: (?<!\s)+++\n$
+  end: ^+++\s
+  patterns:
+  - include: source.toml
+
 - name: markup.raw.coffee.front-matter
   begin: (?<!\s)---\s*coffee\n$
   end: ^---\s
